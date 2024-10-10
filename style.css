@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 2px solid;
+        border-radius: 10px;
+        margin-top: 50px;
+        
+        
+    }
+
+    .adm {
+        background-image: url(./imagens/waybe_enterprises.jpeg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 2px solid;
+        border-radius: 10px;
+        margin-top: 50px;
+    }
+
+}
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cadastro {
+    background-image: ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}/* Define a imagem como background da div */
+/* .container {
+    position: relative; /* Para que o formulário possa ser posicionado dentro */
+    width: 100%; /* Largura total da div */
+    height: 400px; /* Altura da div, ajuste conforme necessário */
+    background-image: url(./imagens/waybe_enterprises.jpeg); /* Substitua com o caminho da sua imagem */
+    background-size: cover; /* A imagem cobre a div inteira */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita a repetição da imagem */
+  }
+  
+  /* Estilos do formulário */
+  .formulario {
+    position: absolute; /* Para sobrepor à imagem */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    padding: 20px; /* Espaço interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombras para destacar */
+  } */
+  
