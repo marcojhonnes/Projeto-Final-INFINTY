@@ -534,11 +534,17 @@ function cadastrarTarefas() {
         const id = Number(numero)
         const pegarTarefa = document.getElementById('input2').value
         if(tarefas[id]){
-            if(pegarTarefa ==='sim') {
+            if(pegarTarefa === 'sim' && tarefas[id].situacao === 'aguardando execussão') {
                 const suaTarefa = `${tarefas[id].funcionario} sua tarefa é: ${tarefas[id].tarefa}`
                 tarefas[id].situacao = 'em execução'
                 mensagem.innerText = suaTarefa
-            paragrafo.innerText = 'boa tarefa'
+                paragrafo.innerText = 'boa tarefa'
+            } else if(pegarTarefa === 'sim' && tarefas[id].situacao === 'em execussão'){
+                paragrafo.innerText = `${tarefas[id].nome} A tarefa já esta sendo executada`
+                // paragrafo.innerText = 'Opção invalida'
+            } else if(pegarTarefa === 'sim' && tarefas[id].situacao === 'concluida'){
+                paragrafo.innerText = `${tarefas[id].nome} A tarefa já foi executada`
+                
             } else {
                 paragrafo.innerText = 'Opção invalida'
             }
@@ -762,26 +768,28 @@ escolher.addEventListener('change', function() {
     } else if(opcaoEscolida === '10') {
         listarTarefas()
     } else if(opcaoEscolida === '11') {
-        tarefaConcluida()
-    } else if(opcaoEscolida === '12') {
-        excluirtarefa()
-    } else if(opcaoEscolida === '13') {
-        listarVeiculos()
-    } else if(opcaoEscolida === '14') {
-        cadastrarVeiculos()
-    } else if(opcaoEscolida === '15') {
-        excluirVeiculo()
-    } else if(opcaoEscolida === '16') {
-        listarArmaduras()
-    } else if(opcaoEscolida === '17') {
-        cadastrararmadura()
-    } else if(opcaoEscolida === '18') {
-        mudarSituacaoArmaduras()
-    } else if(opcaoEscolida === '19') {
-        excluirArmadura()
-    } else if(opcaoEscolida === '20') {
         executarTarefa()
+    } else if(opcaoEscolida === '12') {
+        tarefaConcluida()
+    }  else if(opcaoEscolida === '13') {
+        excluirtarefa()
+    } else if(opcaoEscolida === '14') {
+        listarVeiculos()
+    } else if(opcaoEscolida === '15') {
+        cadastrarVeiculos()
+    } else if(opcaoEscolida === '16') {
+        excluirVeiculo()
+    } else if(opcaoEscolida === '17') {
+        listarArmaduras()
+    } else if(opcaoEscolida === '18') {
+        cadastrararmadura()
+    } else if(opcaoEscolida === '19') {
+        mudarSituacaoArmaduras()
+    } else if(opcaoEscolida === '20') {
+        excluirArmadura()
     } else if(opcaoEscolida === '21') {
+        executarTarefa()
+    } else if(opcaoEscolida === '22') {
         excluirGeremteFuncionario()
     }
 }
