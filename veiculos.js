@@ -4,7 +4,7 @@ function listarVeiculos() {
     mensagem.innerHTML = ''
     let conjuntoVeiculos = Object.values(veiculos);
     let todosveiculos = conjuntoVeiculos.map(function(veiculo) {
-        return `Tarefa: ${veiculo.veiculo}, Prioridade da tarefa: ${veiculo.placa}, ${veiculo.cor}`;
+        return `Veiculo: ${veiculo.veiculo}, Placa do Veiculo: ${veiculo.placa}, Cor do Veiculo: ${veiculo.cor}`;
     }).join('<br>'); 
     document.getElementById('equipamentos-lista').innerHTML = todosveiculos;
 }
@@ -64,7 +64,7 @@ function cadastrarVeiculos() {
          }
          
          }
-         botaoCadastrar.addEventListener('click', excluirVeiculo)
+         botaoCadastrar.addEventListener('click', adicionarVeiculo)
         }
 
 function excluirVeiculo() {

@@ -1,5 +1,5 @@
 window.onload = function() {
-    const nomeUsuario = localStorage.getItem('nomeUsuario', ''); // Recuperando o nome do usuário do localStorage
+    const nomeUsuario = localStorage.getItem('nomeUsuario', ''); 
     if (nomeUsuario) {
         document.getElementById('novaMenssagem').innerText = `Bem-vindo, ${nomeUsuario}, às Indústrias Wayne!`;
     }
@@ -10,6 +10,9 @@ function sair() {
     paragrafo.innerText = `Seja Bem Vindo SR. ${nomeUsuario}`
     mensagem.style.color = 'green'
 }
+
+// colocar a foto do usuario a foto do carro a foto da armadura do armadura Batman
+// adiconar os input para pedir as Fotos estilizar as fotos no css
 
 escolher.addEventListener('change', function() {
     const opcaoEscolida = escolher.value

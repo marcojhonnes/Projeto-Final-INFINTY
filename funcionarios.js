@@ -34,6 +34,12 @@ function cadastrarUsuarios() {
     confirmarSenha.setAttribute('id', 'input5')
     confirmarSenha.setAttribute('type', 'text')
     confirmarSenha.setAttribute('placeholder', 'Confirme a senha')
+
+    // const adicionarFoto = document.createElement('input')
+    // adicionarFoto.setAttribute('id', 'input6')
+    // adicionarFoto.setAttribute('type', 'file')
+    // adicionarFoto.setAttribute('accept', 'image/*')
+    // adicionarFoto.setAttribute('placeholder', 'Inssira a foto')
     
     const botaoCadastrar = document.createElement('button')
     botaoCadastrar .textContent = 'Cadastrar'
@@ -43,6 +49,7 @@ function cadastrarUsuarios() {
     document.getElementById('adm').appendChild(nomeUsuario)
     document.getElementById('adm').appendChild(senhaUsuario)
     document.getElementById('adm').appendChild(confirmarSenha)
+    // document.getElementById('adm').appendChild(adicionarFoto)
     document.getElementById('adm').appendChild(botaoCadastrar)
     function cadastro() {
         const idUse = document.getElementById('input1').value;
