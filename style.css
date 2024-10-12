@@ -58,6 +58,16 @@ h1 {
     color: white;
 }
 
+
+    h2 {
+        position: absolute; /* Posicionamento absoluto */
+        top: 0; /* Alinha o h2 no topo do body */
+        left: 0; /* Alinha o h2 à esquerda do body */
+        margin: 10px; /* Espaçamento opcional */
+        color: white; /* Cor do texto (ajustável conforme seu design) */
+    }
+
+
 select {
     color: white;
     background-color: black;
