@@ -35,6 +35,11 @@
 // portfólio
 
 
+// objetos da pagina administrador
+const administrador = document.getElementById('adm')
+const escolher = document.getElementById('escolha')
+const mensagem = document.getElementById('msg')
+const paragrafo = document.getElementById('equipamentos-lista')
 // capiturando os objetos da pagina index.html
 const cadastro = document.getElementById('cadastro')
 const nome = document.getElementById('nome')
@@ -149,8 +154,10 @@ function iniciar() {
             
             // Função de navegação
             function navegarPara() {
+                const testando = document.createElement('p')
+                
                 window.location.href = 'administrador.html';
-                saudacao.innerText = `Seja Bem Vindo SR. ${nomeUsuario}`
+                paragrafo.innerText = `Seja . ${nomeUsuario}`
             }
             window.addEventListener('click', navegarPara);
         } else if(gerente) {

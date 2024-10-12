@@ -1,36 +1,23 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border: 2px solid;
-        border-radius: 10px;
-        margin-top: 50px;
-        
-        
-    }
-
-    .adm {
-        background-image: url(./imagens/waybe_enterprises.jpeg);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border: 2px solid;
-        border-radius: 10px;
-        margin-top: 50px;
-    }
-
+    color: #FAFAFA;
 }
-h1 {
-    display: flex;
-    justify-content: center;
+
+body {
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 2px solid;
+        border-radius: 10px;
+        margin-top: 50px;
+    padding: 6rem;
+    background-color: rgb(35, 35, 35);
 }
 
 .container {
@@ -39,35 +26,79 @@ h1 {
     align-items: center;
     flex-direction: column;
     gap: 10px;
+
 }
 
-.cadastro {
-    background-image: ;
+button {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color: rgb(240, 181, 31);
+    border-radius: 4px;
+    
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+option {
+    margin-top: 20px;
+    color: white;
+    background-color: black;
+}
+
+#paragrafo {
+    color: blue;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+select {
+    color: white;
+    background-color: black;
+}
+
+
+input {
+    color: black;
+}
+/* main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    gap: 10px;
-}/* Define a imagem como background da div */
-/* .container {
-    position: relative; /* Para que o formulário possa ser posicionado dentro */
-    width: 100%; /* Largura total da div */
-    height: 400px; /* Altura da div, ajuste conforme necessário */
-    background-image: url(./imagens/waybe_enterprises.jpeg); /* Substitua com o caminho da sua imagem */
-    background-size: cover; /* A imagem cobre a div inteira */
-    background-position: center; /* Centraliza a imagem */
-    background-repeat: no-repeat; /* Evita a repetição da imagem */
-  }
-  
-  /* Estilos do formulário */
-  .formulario {
-    position: absolute; /* Para sobrepor à imagem */
-    top: 50%; /* Centraliza verticalmente */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translate(-50%, -50%); /* Ajusta para o centro exato */
-    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
-    padding: 20px; /* Espaço interno */
-    border-radius: 10px; /* Bordas arredondadas */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Sombras para destacar */
-  } */
-  
+    align-items: center;
+    justify-content: center;
+} */
+
+/* section {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+    padding-block: 2rem;
+    flex-wrap: wrap;
+} */
+
+/* .filme {
+    max-width: 300px;
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    border: 4px dashed rgb(232, 80, 80);
+    max-height: 600px;
+} */
+
+
+
+/* .filme div p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+/* .filme img {
+    width: 100%;
+    object-fit: cover;
+} */
