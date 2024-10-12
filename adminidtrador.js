@@ -7,8 +7,6 @@ window.onload = function() {
 
 function sair() {
     window.location.href = 'index.html';
-    paragrafo.innerText = `Seja Bem Vindo SR. ${nomeUsuario}`
-    mensagem.style.color = 'green'
 }
 
 // colocar a foto do usuario a foto do carro a foto da armadura do armadura Batman

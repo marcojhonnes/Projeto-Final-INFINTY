@@ -3,7 +3,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
     color: #FAFAFA;
 }
 
@@ -30,6 +29,20 @@ body {
     margin: 10px;
 
 }
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px;
+
+}
+
+img {
+    width: 50px;
+}
+
 
 button {
     width: 100%;
@@ -60,11 +73,12 @@ h1 {
 
 
     h2 {
-        position: absolute; /* Posicionamento absoluto */
-        top: 0; /* Alinha o h2 no topo do body */
-        left: 0; /* Alinha o h2 à esquerda do body */
-        margin: 10px; /* Espaçamento opcional */
-        color: white; /* Cor do texto (ajustável conforme seu design) */
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        margin: 10px; 
+        color: white; 
+        font-size: 18px;
     }
 
 
