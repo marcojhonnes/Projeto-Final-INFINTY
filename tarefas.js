@@ -32,6 +32,14 @@ function cadastrarTarefas() {
     document.getElementById('adm').appendChild(entrada4)
     document.getElementById('adm').appendChild(botaoCadastrar)
     document.getElementById('adm').appendChild(botaoCadastrar)
+
+    window.onload = function() {
+        const nomeUsuario = localStorage.getItem('nomeUsuario', ''); // Recuperando o nome do usuário do localStorage
+        if (nomeUsuario) {
+            document.getElementById('novaMenssagem').innerText = `Bem-vindo, ${nomeUsuario}, às Indústrias Wayne!`;
+        }
+    };
+
     function adicionarTarefa() {
         const idTarefa = document.getElementById('input1').value
         const opcaoTarefa = document.getElementById('input2').value
@@ -43,7 +51,7 @@ function cadastrarTarefas() {
             tarefas[idTarefa] = {
                 tarefa: opcaoTarefa,
                 prioridade: prioridadeTarefa,
-                funcionario: 'not',
+                funcionario: saudacao,
                 situacao: situacaoTarefa
              }
              mensagem.innerText = `A tarefa com ID: ${idTarefa} foi cadastrada com sucesso`
@@ -131,7 +139,7 @@ function cadastrarTarefas() {
                 tarefas[id].situacao = 'em execução'
                 mensagem.innerText = suaTarefa
                 mensagem.style.color = 'green'
-                paragrafo.innerText = 'boa tarefa'
+                paragrafo.innerText = 'Boa tarefa!'
                 paragrafo.style.color = 'green'
             } else if(pegarTarefa === 'sim' && tarefas[id].situacao === 'em execussão'){
                 paragrafo.innerText = `${tarefas[id].nome} A tarefa já esta sendo executada`

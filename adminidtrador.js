@@ -1,3 +1,9 @@
+window.onload = function() {
+    const nomeUsuario = localStorage.getItem('nomeUsuario', ''); // Recuperando o nome do usuário do localStorage
+    if (nomeUsuario) {
+        document.getElementById('novaMenssagem').innerText = `Bem-vindo, ${nomeUsuario}, às Indústrias Wayne!`;
+    }
+};
 
 function sair() {
     window.location.href = 'index.html';

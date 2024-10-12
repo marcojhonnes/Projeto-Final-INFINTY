@@ -54,7 +54,7 @@ const botaoinicio = document.getElementById('inicio')
 const texto = document.getElementById('text')
 const saudacao = document.getElementById('novaMenssagem')
 const nomes = document.getElementById('nomes')
-
+const nomeFuncionarioLogado = localStorage.getItem('nomeUsuario');
 let armaduraBatman = {
     1:{armaduraNome: 'Batman Begins', situacao: 'indisponivel', anoFabricacao: '2005'}, 
     2:{armaduraNome: 'Batman Dark Knight', situacao: 'disponivel', anoFabricacao: '2008'},
@@ -64,7 +64,7 @@ let armaduraBatman = {
  };
 
 let funcionarios = {
-    1: {id: 12, nome: 'João', nivel: 'Gerente', senha: '1234'},
+    1: {id: 12, nome: 'João', nivel: 'Gerente', senha: '123'},
     2: {id: 2, nome: 'Maria', nivel: 'Administrador', senha: '123'},
     3: {id: 3, nome: 'Marco', nivel: 'Administrador', senha: '123'},
     4: {id: 4, nome: 'Aurelio', nivel: 'Funcionario', senha: '123'},
@@ -96,10 +96,13 @@ let dispositivoSeguranca = {
     4:{nomeDispositivo: 'bat-jato',situacao: 'liberado', disponiblizacao: 'sim'},
 }
 
+
+
 let tarefas = {
     1:{tarefa: 'estudar', prioridade: '1', funcionario: 'not', situacao: 'em execussão'},
     2:{tarefa: 'almoçar', prioridade: '1', funcionario: 'not', situacao: 'aguardando execussão'},
-    3:{tarefa: 'brincar', prioridade: '1', funcionario: 'not', situacao: 'concluida'}
+    3:{tarefa: 'brincar', prioridade: '1', funcionario: 'not', situacao: 'concluida'},
+    4:{tarefa: 'trabalhar', prioridade: '1', funcionario: nomeFuncionario || 'not', situacao: 'aguardando execussão'}
 }
 
 function iniciar() {
@@ -132,13 +135,16 @@ function iniciar() {
                 // saudacao.innerText = funcionarios[id].nome
                 
                 autenticado = true;
+                localStorage.setItem('nomeUsuario', nomeUsuario )
                 break;
             } else if (funcionarios[id].nome === nomeUsuario && funcionarios[id].senha === senhaUsuario && funcionarios[id].nivel === 'Gerente') {
                 // saudacao.innerText = funcionarios[id].nome
                 gerente = true;
+                 localStorage.setItem('nomeUsuario', nomeUsuario)
                 break;
             } else if(funcionarios[id].nome === nomeUsuario && funcionarios[id].senha === senhaUsuario && funcionarios[id].nivel === 'Funcionario') {
                 funcionario = true
+                localStorage.setItem('nomeUsuario', nomeUsuario)
                 break
             }
         }
@@ -180,5 +186,6 @@ function iniciar() {
 botaoinicio.addEventListener('click', iniciar);
 
 function nomeFuncionario() {
-
+    saudacao.innerHTML = 'ola'
 }
+
