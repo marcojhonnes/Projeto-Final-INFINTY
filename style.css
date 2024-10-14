@@ -2,12 +2,22 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     color: #FAFAFA;
+    font-family: 'Montserrat', sans-serif; /* Um estilo forte e robusto */
 }
 
 body {
-
+    /* width: 550px; 
+    height: 400px;  */
+    /* background-image: url(./imagens/sdn7ME.webp);
+    background-repeat: no-repeat; 
+    /* background-position-x: center;
+    background-position-y: center; */
+    /* background-size: 100 px 100px; */
+    
+   
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,6 +29,7 @@ body {
     padding: 6rem;
     background-color: rgb(35, 35, 35);
 }
+
 
 .container {
     display: flex;
@@ -33,14 +44,14 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
-    gap: 10px;
-    margin: 10px;
+    flex-direction: column;
+    margin-top: -80px;
+    
 
 }
 
 img {
-    width: 50px;
+    width: 150px;
 }
 
 
@@ -55,11 +66,9 @@ button {
     transition: 0.3s;
 }
 
-/* option {
-    margin-top: 20px;
-    color: white;
-    background-color: black; */
-/* } */
+#text {
+    font-size: 30px;
+}
 
 #paragrafo {
     color: blue;
@@ -69,6 +78,7 @@ h1 {
     text-align: center;
     margin-bottom: 4rem;
     color: white;
+    font-size: 18px;
 }
 
 
@@ -83,8 +93,10 @@ h1 {
 
 
 select {
+    
     color: white;
     background-color: black;
+    
 }
 
 
@@ -92,3 +104,39 @@ input {
     color: black;
 }
 
+.batman {
+    width: 350px; 
+    height: 40px; 
+    background-image: url(./imagens/sdn7ME.webp); 
+    background-repeat: no-repeat; 
+    background-position: right center; 
+    background-size: 40px 40px;
+    padding-right: 50px;  
+    font-size: 14px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.foto {
+    width: 350px; 
+    height: 40px; 
+    background-image: url(./imagens/sdn7ME.webp); 
+    background-repeat: no-repeat; 
+    background-position: right center; 
+    background-size: 40px 40px;
+    padding-right: 50px;  
+    font-size: 14px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#escolha{
+    width: 350px; 
+    height: 40px; 
+    background-repeat: no-repeat; 
+    background-position: right center; 
+    background-size: 40px 40px;
+    padding-right: 50px;  
+    font-size: 14px; 
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}

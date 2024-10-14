@@ -1,9 +1,29 @@
+// window.onload = function() {
+//     const nomeUsuario = localStorage.getItem('nomeUsuario', ''); 
+//     if (nomeUsuario) {
+//         document.getElementById('novaMenssagem').innerText = `Bem-vindo, ${nomeUsuario}, às Indústrias Wayne!`;
+//         // const executorTarefa = document.getElementById('text')  
+//         texto.innerText = nomeUsuario
+//     }
+// };
+
+
 window.onload = function() {
-    const nomeUsuario = localStorage.getItem('nomeUsuario', ''); 
-    if (nomeUsuario) {
-        document.getElementById('novaMenssagem').innerText = `Bem-vindo, ${nomeUsuario}, às Indústrias Wayne!`;
+    const nomeFuncionario = localStorage.getItem('nomeUsuario');
+    if (nomeFuncionario) {
+        // document.getElementById('novaMenssagem').innerText = `Bem-vindo, ${nomeFuncionario}, às Indústrias Wayne!`;
+        document.getElementById('novaMenssagem').innerText = `Bem-vindo às Indústrias Wayne!`;
+        const texto = document.getElementById('text');
+        texto.innerText = nomeFuncionario;
+        identificacao = `CARGO: ${funcionarios[i].nivel}, NOME: ${texto}`
     }
 };
+
+function limparPagina() {
+    administrador.innerHTML = ''
+    paragrafo.innerHTML = ''
+    mensagem.innerHTML = ''
+    }
 
 function sair() {
     window.location.href = 'index.html';

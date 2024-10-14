@@ -95,18 +95,20 @@ function mudarSituacaoArmaduras() {
        if(armaduraBatman[id]){
             if(novaSituacao === 1){
                 armaduraBatman[id].situacao = 'disponivel'
-            paragrafo.innerText = 'situação da armaduara mudada com sucesso'
+            mensagem.innerText = 'Situação da armaduara mudada com sucesso'
+            mensagem.style.color = 'green'
             console.log(armaduraBatman[id])
             } else if(novaSituacao === 2) {
                 armaduraBatman[id].situacao = 'insponivel'
-                paragrafo.innerText = 'situação da armaduara mudada com sucesso'
+                mensagem.innerText = 'Situação da armaduara mudada com sucesso'
+                mensagem.style.color = 'green'
             } else {
-                paragrafo.innerText = 'valor invalido para situação da armadura'
-                paragrafo.style.color = 'green'
+                mensagem.innerText = 'Valor invalido para situação da armadura'
+                mensagem.style.color = 'green'
             }
         } else {
-            paragrafo.innerText = 'ID Invalido'
-            paragrafo.style.color = 'red'
+            mensagem.innerText = 'ID Invalido'
+            mensagem.style.color = 'red'
         }
     }
     console.log(armaduraBatman)
@@ -144,8 +146,3 @@ function excluirArmadura() {
 }
 // ======================================================================================================================================================
 
-function limparPagina() {
-administrador.innerHTML = ''
-paragrafo.innerHTML = ''
-mensagem.innerHTML = ''
-}

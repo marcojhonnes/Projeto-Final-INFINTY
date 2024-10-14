@@ -42,8 +42,8 @@ const mensagem = document.getElementById('msg')
 const paragrafo = document.getElementById('equipamentos-lista')
 // capiturando os objetos da pagina index.html
 const cadastro = document.getElementById('cadastro')
-const nome = document.getElementById('nome')
-const senha = document.getElementById('senha')
+// const nome = document.getElementById('nome')
+// const senha = document.getElementById('senha')
 const botao = document.getElementById('btn')
 const resposta = document.getElementById('menssagem')
 const titulos = document.getElementById('titulo')
@@ -53,15 +53,9 @@ const option = document.getElementById('opcao')
 const botaoinicio = document.getElementById('inicio')
 const texto = document.getElementById('text')
 const saudacao = document.getElementById('novaMenssagem')
-const nomes = document.getElementById('nomes')
+// const identificacao = document.getElementById('nomes')
 const nomeFuncionarioLogado = localStorage.getItem('nomeUsuario');
-let armaduraBatman = {
-    1:{armaduraNome: 'Batman Begins', situacao: 'indisponivel', anoFabricacao: '2005'}, 
-    2:{armaduraNome: 'Batman Dark Knight', situacao: 'disponivel', anoFabricacao: '2008'},
-    3:{armaduraNome: 'Batman Returns', situacao: 'disponivel', anoFabricacao: '2012'}, 
-    4:{armaduraNome: 'Batman Vs. Superman', situacao: 'indisponivel', anoFabricacao: '2016'},
-    5:{armaduraNome: 'Batman', situacao: 'indisponivel', anoFabricacao: '2022'}
- };
+
 
 let funcionarios = {
     1: {id: 12, nome: 'João', nivel: 'Gerente', senha: '123'},
@@ -73,6 +67,14 @@ let funcionarios = {
     7: {id: 7, nome: 'Alice', nivel: 'Funcionario', senha: '123'},
     8: {id: 8, nome: 'Arthur', nivel: 'Funcionario', senha: '123'}
 };
+
+let armaduraBatman = {
+    1:{armaduraNome: 'Batman Begins', situacao: 'indisponivel', anoFabricacao: '2005'}, 
+    2:{armaduraNome: 'Batman Dark Knight', situacao: 'disponivel', anoFabricacao: '2008'},
+    3:{armaduraNome: 'Batman Returns', situacao: 'disponivel', anoFabricacao: '2012'}, 
+    4:{armaduraNome: 'Batman Vs. Superman', situacao: 'indisponivel', anoFabricacao: '2016'},
+    5:{armaduraNome: 'Batman', situacao: 'indisponivel', anoFabricacao: '2022'}
+ };
 
 let equipamentos = {
     1:{arma: 'pistola 9mm',municao: '50.000 unidades'},
@@ -102,7 +104,7 @@ let tarefas = {
     1:{tarefa: 'estudar', prioridade: '1', funcionario: 'not', situacao: 'em execussão'},
     2:{tarefa: 'almoçar', prioridade: '1', funcionario: 'not', situacao: 'aguardando execussão'},
     3:{tarefa: 'brincar', prioridade: '1', funcionario: 'not', situacao: 'concluida'},
-    4:{tarefa: 'trabalhar', prioridade: '1', funcionario: nomeFuncionario || 'not', situacao: 'aguardando execussão'}
+    4:{tarefa: 'trabalhar', prioridade: '1', funcionario: 'not', situacao: 'aguardando execussão'}
 }
 
 function iniciar() {
@@ -132,7 +134,6 @@ function iniciar() {
         
         for (let id in funcionarios) {
             if (funcionarios[id].nome === nomeUsuario && funcionarios[id].senha === senhaUsuario && funcionarios[id].nivel === 'Administrador') {
-                // saudacao.innerText = funcionarios[id].nome
                 
                 autenticado = true;
                 localStorage.setItem('nomeUsuario', nomeUsuario )

@@ -1,15 +1,17 @@
 // capiturando os objetos da pagina administrador.html
-const administrador = document.getElementById('adm')
-const escolher = document.getElementById('escolha')
-const mensagem = document.getElementById('msg')
-const paragrafo = document.getElementById('equipamentos-lista')
+
+
+// const administrador = document.getElementById('adm')
+// const escolher = document.getElementById('escolha')
+// const mensagem = document.getElementById('msg')
+// const paragrafo = document.getElementById('equipamentos-lista')
 
 
 function cadastrarUsuarios() {
     
-    // administrador.innerHTML = ''
-    // paragrafo.innerHTML = ''
-    // mensagem.innerHTML = ''
+    administrador.innerHTML = ''
+    paragrafo.innerHTML = ''
+    mensagem.innerHTML = ''
     const idUsuario = document.createElement('input')
     idUsuario.setAttribute('id', 'input1')
     idUsuario.setAttribute('type', 'number')
@@ -53,12 +55,11 @@ function cadastrarUsuarios() {
     document.getElementById('adm').appendChild(botaoCadastrar)
     function cadastro() {
         const idUse = document.getElementById('input1').value;
-        idUse.style.color = 'black'
+        // idUse.style.color = 'black'
         const funcao = document.getElementById('input2').value
         const nomeUsu = document.getElementById('input3').value;
         const senhaUsu = document.getElementById('input4').value;
         const confirmSenha = document.getElementById('input5').value;
-        // saudacao.innerText = `Olá seja oiiii bem vindo ${nomeUsu}`
 
         if (idUse === '' || nomeUsu === '' || senhaUsu === '' || confirmSenha === '' || funcao === '') {
             mensagem.innerText = 'Preencha todos os campos';
@@ -252,7 +253,6 @@ function mostrarFuncionariosAdministrador() {
         }
     }
     
-    console.log(funcionarios)
     botaoBuscar.addEventListener('click', buscar)
 }
 
