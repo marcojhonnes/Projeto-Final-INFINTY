@@ -38,8 +38,7 @@ while True:
     elif opcoes == 6:
         funcionario.pesquisar_funcionario_por_id_gerente()
     elif opcoes == 7:
-        funcionario.excluir_funcionario_administrador7
-        ()
+        funcionario.excluir_funcionario_administrador()
     elif opcoes == 8:
         armadura.adicionar_armadura()
     elif opcoes == 9:
