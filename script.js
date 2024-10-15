@@ -58,14 +58,14 @@ const nomeFuncionarioLogado = localStorage.getItem('nomeUsuario');
 
 
 let funcionarios = {
-    1: {id: 12, nome: 'João', nivel: 'Gerente', senha: '123'},
-    2: {id: 2, nome: 'Maria', nivel: 'Administrador', senha: '123'},
-    3: {id: 3, nome: 'Marco', nivel: 'Administrador', senha: '123'},
-    4: {id: 4, nome: 'Aurelio', nivel: 'Funcionario', senha: '123'},
-    5: {id: 5, nome: 'Junior', nivel: 'Gerente', senha: '123'},
-    6: {id: 6, nome: 'Christopher', nivel: 'Gerente', senha: '123'},
-    7: {id: 7, nome: 'Alice', nivel: 'Funcionario', senha: '123'},
-    8: {id: 8, nome: 'Arthur', nivel: 'Funcionario', senha: '123'}
+    1: {id: 1, nome: 'João', nivel: 'Gerente', senha: '123', dataAdmissao: '15/05/2023'},
+    2: {id: 2, nome: 'Maria', nivel: 'Administrador', senha: '123', dataAdmissao: '15/05/2023'},
+    3: {id: 3, nome: 'Marco', nivel: 'Administrador', senha: '123', dataAdmissao: '15/05/2023'},
+    4: {id: 4, nome: 'Aurelio', nivel: 'Funcionario', senha: '123', dataAdmissao: '15/05/2023'},
+    5: {id: 5, nome: 'Junior', nivel: 'Gerente', senha: '123', dataAdmissao: '15/05/2023'},
+    6: {id: 6, nome: 'Christopher', nivel: 'Gerente', senha: '123', dataAdmissao: '15/05/2023'},
+    7: {id: 7, nome: 'Alice', nivel: 'Funcionario', senha: '123', dataAdmissao: '15/05/2023'},
+    8: {id: 8, nome: 'Arthur', nivel: 'Funcionario', senha: '123', dataAdmissao: '15/05/2023'}
 };
 
 let armaduraBatman = {

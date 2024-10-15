@@ -15,7 +15,7 @@ window.onload = function() {
         document.getElementById('novaMenssagem').innerText = `Bem-vindo às Indústrias Wayne!`;
         const texto = document.getElementById('text');
         texto.innerText = nomeFuncionario;
-        identificacao = `CARGO: ${funcionarios[i].nivel}, NOME: ${texto}`
+        // identificacao = `CARGO: ${funcionarios[i].nivel}, NOME: ${texto}`
     }
 };
 
