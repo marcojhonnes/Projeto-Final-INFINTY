@@ -70,7 +70,7 @@ function retornarTodosEquipamentos() {
     let equipamentosArray = Object.values(equipamentos);
     let listaFormatada = equipamentosArray.map(function(equipamento) {
         return `Arma: ${equipamento.arma}, Quantidade de Munição: ${equipamento.municao}`;
-    }).join('<br>'); // Formata cada item e junta com quebras de linha
+    }).join('<br>');
     document.getElementById('equipamentos-lista').innerHTML = listaFormatada;
 }
 

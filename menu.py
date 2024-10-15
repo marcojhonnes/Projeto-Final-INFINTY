@@ -10,16 +10,33 @@ while True:
     print("Escolha a opção desejada: ")
     print("1. Adicionar Funcionario")
     print("2. Listar Funcionario")
-    print('3. Adicionar Armadura')
-    print('4. Listar Armadura')
-    print('5. Adicionar Equipamento')
-    print('6. Listar Equipamento')
-    print('7. Adicionar Veiculo')
-    print('8. Listar3 Veiculo')
-    print('9. Adicionar Dispositivo Seguranca')
-    print('10. Listar Dispositivo Seguranca')
-    print('11. Adicionar Tarefa')
-    print('12. Listar Tarefa')
+    print('3. Pesquisar Funcionario por nome -Adiministrador-')
+    print('4. Pesquisar Funcionario por ID -Adiministrador-')
+    print('5. Pesquisar Funcionario por nome -Gerente-')
+    print('6. Pesquisar Funcionario por ID -Gerente-')
+    print('7. Excluir Funcionario por nome -Adiministrador-')
+
+    print('8. Adicionar Armadura')
+    print('9. Listar Armadura')
+    print('10. Alterar Situação da Armadura')
+    print('11. Excluir Armadura')
+
+    print('12. Adicionar Equipamento')
+    print('13. Listar Equipamento')
+    print('14. Excluir Equipamento')
+
+    print('15. Adicionar Veiculo')
+    print('16. Listar Veiculo')
+    print('17. Excluir Veiculo')
+
+    print('18. Adicionar Dispositivo Seguranca')
+    print('19. Listar Dispositivo Seguranca')
+    print('20. Excluir Dispositivo Seguranca')
+
+    print('21. Adicionar Tarefa')
+    print('22. Listar Tarefa')
+    print('23. Executar Tarefa')
+    print('24. Excluir Tarefa')
     print('0. Sair')
     opcoes = int(input('  '))
     if opcoes == 0:
@@ -39,24 +56,43 @@ while True:
         funcionario.pesquisar_funcionario_por_id_gerente()
     elif opcoes == 7:
         funcionario.excluir_funcionario_administrador()
+
     elif opcoes == 8:
         armadura.adicionar_armadura()
     elif opcoes == 9:
         armadura.listar_armaduras()
     elif opcoes == 10:
-        equipamento.adicionar_equipamento()
+        armadura.alterar_situacao_armadura()
     elif opcoes == 11:
-        equipamento.listar_equipamentos()
+        armadura.excluir_armadura()
+    
     elif opcoes == 12:
-        veiculo.adicionar_veiculo()
+        equipamento.adicionar_equipamento()
     elif opcoes == 13:
-        veiculo.listar_veiculo()
+        equipamento.listar_equipamentos()
     elif opcoes == 14:
-       dispositivo.adicionarDispositivoSeguranca()
+        equipamento.excluir_equipamento_seguranca()
+
     elif opcoes == 15:
-       dispositivo.listar_dispositivo()
+        veiculo.adicionar_veiculo()
     elif opcoes == 16:
-        tarefa.adicionartarefas()
+        veiculo.listar_veiculos()
+    elif opcoes == 17:
+        veiculo.excluir_veiculo()
+        
     elif opcoes == 18:
+       dispositivo.adicionarDispositivoSeguranca()
+    elif opcoes == 19:
+       dispositivo.listar_dispositivo_seguranca()
+    elif opcoes == 20:
+       dispositivo.excluir_dispositivo_seguranca()
+
+    elif opcoes == 21:
+        tarefa.adicionartarefas()
+    elif opcoes == 22:
         tarefa.listar_tarefas()
+    elif opcoes == 23:
+        tarefa.executar_tarefa()
+    elif opcoes == 24:
+        tarefa.excluir_tarefa()
     

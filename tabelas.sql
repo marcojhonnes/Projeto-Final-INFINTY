@@ -39,4 +39,3 @@ prioridade INT NOT NULL,
 funcionario VARCHAR(100) NOT NULL,
 situacao VARCHAR(100) NOT NULL
 );
-
