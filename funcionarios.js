@@ -1,12 +1,3 @@
-// capiturando os objetos da pagina administrador.html
-
-
-// const administrador = document.getElementById('adm')
-// const escolher = document.getElementById('escolha')
-// const mensagem = document.getElementById('msg')
-// const paragrafo = document.getElementById('equipamentos-lista')
-
-
 function cadastrarUsuarios() {
     
     administrador.innerHTML = ''
@@ -102,21 +93,17 @@ function mostrarNomeFuncionariosGerente() {
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
 
-    // Criação do campo de entrada
+    
     const entrada1 = document.createElement('input')
     entrada1.setAttribute('id', 'input1')
     entrada1.setAttribute('type', 'text')
     entrada1.setAttribute('placeholder', 'Digite o Nome do funcionario')
 
-    // Criação do botão de busca
     const botaoBuscar = document.createElement('button')
     botaoBuscar.textContent = 'Pesquisar'
 
-    // Adiciona o campo de entrada e o botão ao elemento com ID 'adm'
     document.getElementById('adm').appendChild(entrada1)
     document.getElementById('adm').appendChild(botaoBuscar)
-
-    // Adiciona o evento de clique no botão
     botaoBuscar.addEventListener('click', function () {
         const nomeInput = document.getElementById('input1').value;
         pesquisarFuncionarioPorNome(nomeInput);
@@ -126,7 +113,7 @@ function mostrarNomeFuncionariosGerente() {
 function pesquisarFuncionarioPorNome(nome) {
     let funcionarioEncontrado = null;
 
-    // Percorre todos os funcionários para encontrar o nome correspondente
+    
     for (let key in funcionarios) {
         if (funcionarios[key].nome.toLowerCase() === nome.toLowerCase()) {
             funcionarioEncontrado = funcionarios[key];
@@ -141,7 +128,7 @@ function pesquisarFuncionarioPorNome(nome) {
         mensagem.innerText = 'Funcionário não encontrado';
     }
 
-    // Limpa o campo de entrada
+    
     document.getElementById('input1').value = '';
 }
 
@@ -151,17 +138,15 @@ function mostrarNomeFuncionariosAdministrador() {
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
 
-    // Criação do campo de entrada
+    
     const entrada1 = document.createElement('input')
     entrada1.setAttribute('id', 'input1')
     entrada1.setAttribute('type', 'text')
     entrada1.setAttribute('placeholder', 'Digite o Nome do funcionario')
 
-    // Criação do botão de busca
     const botaoBuscar = document.createElement('button')
     botaoBuscar.textContent = 'Pesquisar'
 
-    // Adiciona o campo de entrada e o botão ao elemento com ID 'adm'
     document.getElementById('adm').appendChild(entrada1)
     document.getElementById('adm').appendChild(botaoBuscar)
 
@@ -175,7 +160,6 @@ function mostrarNomeFuncionariosAdministrador() {
 function pesquisarFuncionarioPorNome(nome) {
     let funcionarioEncontrado = null;
 
-    // Percorre todos os funcionários para encontrar o nome correspondente
     for (let key in funcionarios) {
         if (funcionarios[key].nome.toLowerCase() === nome.toLowerCase()) {
             funcionarioEncontrado = funcionarios[key];
@@ -191,12 +175,9 @@ function pesquisarFuncionarioPorNome(nome) {
         mensagem.style.color = 'red'
     }
 
-    // Limpa o campo de entrada
     document.getElementById('input1').value = '';
 }
 }
-
-
 
 function mostrarFuncionariosId() {
     administrador.innerHTML = ''
