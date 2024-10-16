@@ -37,11 +37,16 @@ function cadastrarUsuarios() {
     confirmarSenha.setAttribute('type', 'text')
     confirmarSenha.setAttribute('placeholder', 'Confirme a senha')
 
-    const admissao = document.createElement('input')
-    admissao.setAttribute('id', 'input6')
-    admissao.setAttribute('type', 'file')
-    admissao.setAttribute('accept', 'image/*')
-    admissao.setAttribute('placeholder', 'Digite a data da admissao')
+    const dataAdmissao = document.createElement('input')
+    dataAdmissao.setAttribute('id', 'input6')
+    dataAdmissao.setAttribute('type', 'text')
+    dataAdmissao.setAttribute('placeholder', 'Digite a data de admissão')
+
+    const foto = document.createElement('input')
+    foto.setAttribute('id', 'input6')
+    foto.setAttribute('type', 'file')
+    foto.setAttribute('accept', 'image/*')
+    foto.setAttribute('placeholder', 'Escolha a foto')
     
     const botaoCadastrar = document.createElement('button')
     botaoCadastrar .textContent = 'Cadastrar'
@@ -51,7 +56,7 @@ function cadastrarUsuarios() {
     document.getElementById('adm').appendChild(nomeUsuario)
     document.getElementById('adm').appendChild(senhaUsuario)
     document.getElementById('adm').appendChild(confirmarSenha)
-    document.getElementById('adm').appendChild(admissao)
+    document.getElementById('adm').appendChild(dataAdmissao)
     document.getElementById('adm').appendChild(botaoCadastrar)
     function cadastro() {
         const idUse = document.getElementById('input1').value;
@@ -62,15 +67,19 @@ function cadastrarUsuarios() {
         const confirmSenha = document.getElementById('input5').value;
         const admissaoData = document.getElementById('input6').value;
 
-        if (idUse === '' || nomeUsu === '' || senhaUsu === '' || confirmSenha === '' || funcao === '' || admissao === '') {
+        if (idUse === '' || nomeUsu === '' || senhaUsu === '' || confirmSenha === '' || funcao === '' || dataAdmissao === '') {
             mensagem.innerText = 'Preencha todos os campos';
+            mensagem.style.color = 'red'
         } else if (senhaUsu !== confirmSenha) {
             mensagem.innerText = 'As senhas não coincidem!';
+            mensagem.style.color = 'red'
         } else {
             mensagem.innerText = 'Usuário cadastrado com sucesso!';
+            mensagem.style.color = 'green'
             funcionarios[idUse] = {
-                nivel: funcao,
+                id: idUse,
                 nome: nomeUsu,
+                nivel: funcao,
                 senha: senhaUsu,
                 dataAdmissao: admissaoData
             };
@@ -179,6 +188,7 @@ function pesquisarFuncionarioPorNome(nome) {
         mensagem.innerText = dadosFuncionario;
     } else {
         mensagem.innerText = 'Funcionário não encontrado';
+        mensagem.style.color = 'red'
     }
 
     // Limpa o campo de entrada
@@ -211,6 +221,7 @@ function mostrarFuncionariosId() {
             document.getElementById('input1').value = '';
         } else {
             mensagem.innerText = 'Funcionário não encontrado'
+            mensagem.style.color = 'red'
         }
     }
     
@@ -218,7 +229,7 @@ function mostrarFuncionariosId() {
     botaoBuscar.addEventListener('click', buscar)
 }
 
-function listarFuncionarios() {
+function listarFuncionariosGerente() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerText = ''
@@ -230,7 +241,7 @@ function listarFuncionarios() {
     document.getElementById('equipamentos-lista').innerHTML = todosFuncionarios
 }
 
-function mostrarFuncionariosAdministrador() {
+function listarFuncionariosIdAdministrador() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -248,11 +259,13 @@ function mostrarFuncionariosAdministrador() {
         if(funcionarios[membro]) {
             const funcionario = funcionarios[membro]
             const dadosFuncionario = `ID: ${funcionario.id} \n NOME: ${funcionario.nome}\ nNIVEL: ${funcionario.nivel} \n SENHA: ${funcionario.senha} \n DATA ADMISSÃO: ${funcionario.dataAdmissao} `
+            mensagem.style.color = 'green'
             // const dadositem = `nome: ${objeto.nomeDispositivo}\n situacao: ${objeto.situacao}\ndisponibilidade: ${objeto.disponibilidade} `
             mensagem.innerText = dadosFuncionario
             document.getElementById('input1').value = '';
         } else {
             mensagem.innerText = 'Funcionário não encontrado'
+            mensagem.style.color = 'red'
         }
     }
     
@@ -266,12 +279,12 @@ function listarFuncionariosAdministrador() {
 
     let conjuntoFuncionarios = Object.values(funcionarios)
     let todosFuncionarios = conjuntoFuncionarios.map(function(funcionario){
-        return `Nome do funcionario: ${funcionario.nome}, Cargo:  ${funcionario.nivel}, Senha: ${funcionario.senha} \n DATA ADMISSÃO: ${funcionario.dataAdmissao}`
+        return `ID: ${funcionario.id} \n Nome do funcionario: ${funcionario.nome}, Cargo:  ${funcionario.nivel}, Senha: ${funcionario.senha} \n DATA ADMISSÃO: ${funcionario.dataAdmissao}`
     }).join('<br>')
     document.getElementById('equipamentos-lista').innerHTML = todosFuncionarios
 }
 
-function excluirFuncionario() {
+function excluirFuncionarioAdministrador() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -290,12 +303,14 @@ function excluirFuncionario() {
     function excluir(){
         const id = document.getElementById('input1').value
         mensagem.innerText = `Funcionario: ${funcionarios[id].nome}, Cargo: ${funcionarios[id].nivel} \n DATA ADMISSÃO: ${funcionario.dataAdmissao}. Funcionário excluído com sucesso!`
+        mensagem.style.color = 'green'
         if(funcionarios[id]) {
             delete funcionarios[id]
             
             document.getElementById('input1').value = ''
         } else {
             mensagem.innerText = 'Funcionário não encontrado!'
+            mensagem.style.color = 'red'
             document.getElementById('input1').value = ''
         }
     }
@@ -318,13 +333,25 @@ function excluirGeremteFuncionario() {
     document.getElementById('adm').appendChild(botaoEcluir)
     function excluir(){
         const id = document.getElementById('input1').value
-        mensagem.innerText = `Funcionario: ${funcionarios[id].nome}, Cargo: ${funcionarios[id].nivel} \n DATA ADMISSÃO: ${funcionario.dataAdmissao}. Funcionário excluído com sucesso!`
-        if(funcionarios[id] && funcionarios[id].nivel != 'administrador') {
+        
+        if(funcionarios[id]) {
+           if(funcionarios[id].nivel === 'Administrador') {
+            mensagem.innerText = `Você não tem permissão para escluir o ADMINISTRADOR, "${funcionarios[id].nome}"!`
+            mensagem.style.color = 'red'
+            document.getElementById('input1').value = ''
+            console.log(funcionarios)
+           } else {
+            mensagem.innerText = `Funcionário, "${funcionarios[id].nome}" excluído com sucesso!`
+            mensagem.style.color = 'green'
             delete funcionarios[id]
             
-            document.getElementById('input1').value = ''
-        } else if(funcionarios[id] && funcionarios[id].nivel === 'administrador') {
-            mensagem.innerText = 'Você não tem permissão para escluir esteFuncionário!'
+             document.getElementById('input1').value = ''
+            console.log(funcionarios)
+           }
+            
+        } else {
+            mensagem.innerText = 'Funcionario não encontrado!'
+            mensagem.style.color = 'red'
             document.getElementById('input1').value = ''
         }
     }

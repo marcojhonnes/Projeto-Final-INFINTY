@@ -41,52 +41,52 @@ escolher.addEventListener('change', function() {
     } else if(opcaoEscolida === '2') {
         mostrarFuncionariosId()
     } else if (opcaoEscolida === '3'){ 
-        mostrarFuncionariosAdministrador()
+        listarFuncionariosIdAdministrador()
     } else if(opcaoEscolida === '4') {
         listarFuncionariosAdministrador()
     } else if(opcaoEscolida === '5') {
-        listarFuncionarios()
+        listarFuncionariosGerente()
     } else if(opcaoEscolida === '6') {
-        excluirFuncionario()
-    } else if(opcaoEscolida === '7') {
-        cadastrarDispositivo()
-    } else if(opcaoEscolida === '8') {
-        pesquisarDispositivo()
-    } else if(opcaoEscolida === '9') {
-        retornarTodosEquipamentos()
-    } else if(opcaoEscolida === '10') {
-        excluirDispositivoSeguranca()
-    } else if(opcaoEscolida === '11') {
-        cadastrarTarefas()
-    } else if(opcaoEscolida === '12') {
-        listarTarefas()
-    } else if(opcaoEscolida === '13') {
-        executarTarefa()
-    } else if(opcaoEscolida === '14') {
-        tarefaConcluida()
-    }  else if(opcaoEscolida === '15') {
-        excluirtarefa()
-    } else if(opcaoEscolida === '16') {
-        listarVeiculos()
-    } else if(opcaoEscolida === '17') {
-        cadastrarVeiculos()
-    } else if(opcaoEscolida === '18') {
-        excluirVeiculo()
-    } else if(opcaoEscolida === '19') {
-        listarArmaduras()
-    } else if(opcaoEscolida === '20') {
-        cadastrararmadura()
-    } else if(opcaoEscolida === '21') {
-        mudarSituacaoArmaduras()
-    } else if(opcaoEscolida === '22') {
-        excluirArmadura()
-    } else if(opcaoEscolida === '23') {
-        excluirGeremteFuncionario()
-    } else if(opcaoEscolida === '24') {
         mostrarNomeFuncionariosAdministrador()
-    } else if(opcaoEscolida === '25') {
+    } else if(opcaoEscolida === '7') {
         mostrarNomeFuncionariosGerente()
-    } else if(opcaoEscolida === '26') {
+    } else if(opcaoEscolida === '8') {
+        excluirFuncionario()
+    } else if(opcaoEscolida === '9') {
+        excluirGeremteFuncionario()
+    } else if(opcaoEscolida === '10') {
+        cadastrarDispositivo()
+    } else if(opcaoEscolida === '11') {
+        pesquisarDispositivo()
+    } else if(opcaoEscolida === '12') {
+        retornarTodosEquipamentos()
+    } else if(opcaoEscolida === '13') {
+        excluirDispositivoSeguranca()
+    } else if(opcaoEscolida === '14') {
+        cadastrarTarefas()
+    } else if(opcaoEscolida === '15') {
+        listarTarefas()
+    } else if(opcaoEscolida === '16') {
+        executarTarefa()
+    } else if(opcaoEscolida === '17') {
+        tarefaConcluida()
+    }  else if(opcaoEscolida === '18') {
+        excluirtarefa()
+    } else if(opcaoEscolida === '19') {
+        listarVeiculos()
+    } else if(opcaoEscolida === '20') {
+        cadastrarVeiculos()
+    } else if(opcaoEscolida === '21') {
+        excluirVeiculo()
+    } else if(opcaoEscolida === '22') {
+        listarArmaduras()
+    } else if(opcaoEscolida === '23') {
+        cadastrararmadura()
+    } else if(opcaoEscolida === '24') {
+        mudarSituacaoArmaduras()
+    } else if(opcaoEscolida === '25') {
+        excluirArmadura()
+    }  else if(opcaoEscolida === '26') {
         sair()
     }
 }
