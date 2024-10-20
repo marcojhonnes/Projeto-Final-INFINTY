@@ -7,7 +7,7 @@ function cadastrarUsuarios() {
     idUsuario.setAttribute('id', 'input1')
     idUsuario.setAttribute('type', 'number')
     idUsuario.setAttribute('placeholder', 'Digite o ID')
-    // idUsuario.style.backgroundColor = 'black'
+    
     const nivelSeguranca = document.createElement('input')
     nivelSeguranca.setAttribute('id', 'input2')
     nivelSeguranca.setAttribute('type', 'text')
@@ -20,12 +20,12 @@ function cadastrarUsuarios() {
 
     const senhaUsuario = document.createElement('input')
     senhaUsuario.setAttribute('id', 'input4')
-    senhaUsuario.setAttribute('type', 'text')
+    senhaUsuario.setAttribute('type', 'password')
     senhaUsuario.setAttribute('placeholder', 'Digite a senha')
 
     const confirmarSenha = document.createElement('input')
     confirmarSenha.setAttribute('id', 'input5')
-    confirmarSenha.setAttribute('type', 'text')
+    confirmarSenha.setAttribute('type', 'password')
     confirmarSenha.setAttribute('placeholder', 'Confirme a senha')
 
     const dataAdmissao = document.createElement('input')
@@ -168,7 +168,7 @@ function pesquisarFuncionarioPorNome(nome) {
     }
 
     if (funcionarioEncontrado) {
-        const dadosFuncionario = `ID: ${funcionarioEncontrado.id} \n NOME: ${funcionarioEncontrado.nome} \n NIVEL: ${funcionarioEncontrado.nivel} \nN SENHA: ${funcionarioEncontrado.senha} \n DATA DE ADMISSÃO: ${funcionarioEncontrado.dataAdmissao}`;
+        const dadosFuncionario = `ID: ${funcionarioEncontrado.id} \n NOME: ${funcionarioEncontrado.nome} \n NIVEL: ${funcionarioEncontrado.nivel} \n SENHA: ${funcionarioEncontrado.senha} \n DATA DE ADMISSÃO: ${funcionarioEncontrado.dataAdmissao}`;
         mensagem.innerText = dadosFuncionario;
     } else {
         mensagem.innerText = 'Funcionário não encontrado';
@@ -196,7 +196,7 @@ function mostrarFuncionariosId() {
         const membro = document.getElementById('input1').value
         if(funcionarios[membro]) {
             const funcionario = funcionarios[membro]
-            const dadosFuncionario = `ID: ${funcionario.id}\nNOME: ${funcionario.nome}\nNIVEL: ${funcionario.nivel}\n DATA ADMISSÃO: ${funcionario.dataAdmissao}`
+            const dadosFuncionario = `ID: ${funcionario.id}\nNOME: ${funcionario.nome}\nNIVEL: ${funcionario.nivel}\nDATA ADMISSÃO: ${funcionario.dataAdmissao}`
             // const dadositem = `nome: ${objeto.nomeDispositivo}\n situacao: ${objeto.situacao}\ndisponibilidade: ${objeto.disponibilidade} `
             mensagem.innerText = dadosFuncionario
             document.getElementById('input1').value = '';
@@ -239,7 +239,7 @@ function listarFuncionariosIdAdministrador() {
         const membro = document.getElementById('input1').value
         if(funcionarios[membro]) {
             const funcionario = funcionarios[membro]
-            const dadosFuncionario = `ID: ${funcionario.id} \n NOME: ${funcionario.nome}\ nNIVEL: ${funcionario.nivel} \n SENHA: ${funcionario.senha} \n DATA ADMISSÃO: ${funcionario.dataAdmissao} `
+            const dadosFuncionario = `ID: ${funcionario.id} \n NOME: ${funcionario.nome}\nNIVEL: ${funcionario.nivel} \n SENHA: ${funcionario.senha} \n DATA ADMISSÃO: ${funcionario.dataAdmissao} `
             mensagem.style.color = 'green'
             // const dadositem = `nome: ${objeto.nomeDispositivo}\n situacao: ${objeto.situacao}\ndisponibilidade: ${objeto.disponibilidade} `
             mensagem.innerText = dadosFuncionario
@@ -263,6 +263,7 @@ function listarFuncionariosAdministrador() {
         return `ID: ${funcionario.id} \n Nome do funcionario: ${funcionario.nome}, Cargo:  ${funcionario.nivel}, Senha: ${funcionario.senha} \n DATA ADMISSÃO: ${funcionario.dataAdmissao}`
     }).join('<br>')
     document.getElementById('equipamentos-lista').innerHTML = todosFuncionarios
+    
 }
 
 function excluirFuncionarioAdministrador() {

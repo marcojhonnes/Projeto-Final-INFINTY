@@ -1,12 +1,3 @@
-// window.onload = function() {
-//     const nomeUsuario = localStorage.getItem('nomeUsuario', ''); 
-//     if (nomeUsuario) {
-//         document.getElementById('novaMenssagem').innerText = `Bem-vindo, ${nomeUsuario}, às Indústrias Wayne!`;
-//         // const executorTarefa = document.getElementById('text')  
-//         texto.innerText = nomeUsuario
-//     }
-// };
-
 
 window.onload = function() {
     const nomeFuncionario = localStorage.getItem('nomeUsuario');

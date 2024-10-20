@@ -34,16 +34,14 @@
 // final, além de ser a sua avaliação, também lhe serve como um bom
 // portfólio
 
+// pagina script
 
-// objetos da pagina administrador
 const administrador = document.getElementById('adm')
 const escolher = document.getElementById('escolha')
 const mensagem = document.getElementById('msg')
 const paragrafo = document.getElementById('equipamentos-lista')
-// capiturando os objetos da pagina index.html
+
 const cadastro = document.getElementById('cadastro')
-// const nome = document.getElementById('nome')
-// const senha = document.getElementById('senha')
 const botao = document.getElementById('btn')
 const resposta = document.getElementById('menssagem')
 const titulos = document.getElementById('titulo')
@@ -53,7 +51,6 @@ const option = document.getElementById('opcao')
 const botaoinicio = document.getElementById('inicio')
 const texto = document.getElementById('text')
 const saudacao = document.getElementById('novaMenssagem')
-// const identificacao = document.getElementById('nomes')
 const nomeFuncionarioLogado = localStorage.getItem('nomeUsuario');
 
 
@@ -155,16 +152,10 @@ function iniciar() {
             const botaoPagina = document.createElement('button');
             botaoPagina.textContent = 'Navegar';
             document.getElementById('cadastro').appendChild(botaoPagina);
-            // resposta.innerText = `Seja Bem Vindo SR. ${nomeUsuario} às Empresas WAYNE`;
-            // saudacao.innerText = `Seja Bem Vindo SR. ${nomeUsuario} às Empresas WAYNE`
             
-            
-            // Função de navegação
             function navegarPara() {
-                const testando = document.createElement('p')
-                
+                const testando = document.createElement('p')    
                 window.location.href = 'administrador.html';
-                paragrafo.innerText = `Seja . ${nomeUsuario}`
             }
             window.addEventListener('click', navegarPara);
         } else if(gerente) {
@@ -179,6 +170,7 @@ function iniciar() {
             window.addEventListener('click', navegarFuncionario)
         } else  {
             resposta.innerHTML = 'Nome ou senha inválidos, tente novamente!';
+            resposta.style.color = 'red'
         }
     }
     botao3.addEventListener('click', entrar);
