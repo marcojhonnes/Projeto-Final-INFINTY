@@ -1,3 +1,4 @@
+// data/tarefas.js
 let tarefas = {
     1: { tarefa: 'estudar', prioridade: '1', funcionario: 'not', situacao: 'em execução' },
     2: { tarefa: 'almoçar', prioridade: '1', funcionario: 'not', situacao: 'aguardando execução' },
