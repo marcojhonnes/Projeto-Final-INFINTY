@@ -1,4 +1,6 @@
-function cadastrarTarefas() {
+
+import { tarefas, administrador, mensagem, paragrafo, nomeFuncionarioLogado } from "./script.js"
+export function cadastrarTarefas() {
     administrador.innerHTML = ''
     mensagem.innerHTML = ''
     
@@ -60,17 +62,17 @@ function cadastrarTarefas() {
          botaoCadastrar.addEventListener('click', adicionarTarefa)
         }
            
-    function listarTarefas() {
-        administrador.innerHTML = ''
-        mensagem.innerHTML = ''
-        let todasTarefas = Object.values(tarefas);
-        let listaFormatada = todasTarefas.map(function(tarefaDiaria) {
-            return `Tarefa: ${tarefaDiaria.tarefa}, Prioridade da tarefa: ${tarefaDiaria.prioridade}, Situação da tarefa: ${tarefaDiaria.situacao}, Executada por: ${tarefaDiaria.funcionario}`;
-        }).join('<br>'); 
-        document.getElementById('equipamentos-lista').innerHTML = listaFormatada;
+export function listarTarefas() {
+    administrador.innerHTML = ''
+    mensagem.innerHTML = ''
+    let todasTarefas = Object.values(tarefas);
+    let listaFormatada = todasTarefas.map(function(tarefaDiaria) {
+        return `Tarefa: ${tarefaDiaria.tarefa}, Prioridade da tarefa: ${tarefaDiaria.prioridade}, Situação da tarefa: ${tarefaDiaria.situacao}, Executada por: ${tarefaDiaria.funcionario}`;
+    }).join('<br>'); 
+    document.getElementById('equipamentos-lista').innerHTML = listaFormatada;
     }
 
-    function excluirtarefa() {
+export function excluirtarefa() {
         administrador.innerHTML = ''
         mensagem.innerHTML = ''
         const entrada1 = document.createElement('input')
@@ -99,7 +101,7 @@ function cadastrarTarefas() {
         botaoEcluir.addEventListener('click', excluir)
     }
 
-    function executarTarefa() {
+export function executarTarefa() {
         administrador.innerHTML = ''
         paragrafo.innerHTML = ''
         mensagem.innerHTML = ''
@@ -155,7 +157,7 @@ function cadastrarTarefas() {
     botaoExecutar.addEventListener('click', executar)
     }
 
-    function tarefaConcluida() {
+export function tarefaConcluida() {
         administrador.innerHTML = ''
         paragrafo.innerHTML = ''
         mensagem.innerHTML = '' 

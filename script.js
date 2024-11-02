@@ -1,60 +1,24 @@
-// Projeto Final
-// As Indústrias Wayne, uma empresa renomada e inovadora liderada pelo
-// lendário Bruce Wayne (também conhecido como Batman), está buscando
-// uma solução tecnológica para otimizar seus processos internos e melhorar a
-// segurança de Gotham City. Como parte de seu projeto final, você irá
-// desenvolver uma aplicação web full stack que atenda às necessidades
-// específicas das Indústrias Wayne.
-// Descrição do Projeto: Sua missão é criar uma plataforma que aborde os
-// requisitos que são abordados na próxima página do arquivo.
+// pagina script.js
 
-// DO PROJETO:
-// Sistema de Gerenciamento de Segurança:
-// Desenvolva um sistema de controle de acesso que permita apenas
-// usuários autorizados a acessar áreas restritas das instalações das Indústrias
-// Wayne.
-// Implemente autenticação e autorização para diferentes tipos de usuários,
-// como funcionários, gerentes e administradores de segurança.
-// Gestão de Recursos:
-// Desenvolva uma interface para gerenciar recursos internos, como
-// inventário de equipamentos, veículos e dispositivos de segurança.
-// Permita que os administradores possam adicionar, remover e atualizar
-// informações sobre esses recursos de forma eficiente.
-// Dashboard de Visualização:
-// Crie um painel de controle visualmente atraente que exiba dados relevantes
-// sobre segurança, recursos e atividades dentro das Indústrias Wayne
+export const administrador = document.getElementById('adm')
+export const escolher = document.getElementById('escolha')
+export const mensagem = document.getElementById('msg')
+export const paragrafo = document.getElementById('equipamentos-lista')
 
-// Entrega:
-// Apresente um protótipo funcional da aplicação, incluindo código
-// fonte e documentação detalhada.
-// Certifique-se de demonstrar a integração eficaz entre o frontend e
-// o backend, bem como a implementação dos requisitos
-// mencionados acima. 
-// Use todo e qualquer conhecimento adquirido até aqui. Este projeto
-// final, além de ser a sua avaliação, também lhe serve como um bom
-// portfólio
-
-// pagina script
-
-const administrador = document.getElementById('adm')
-const escolher = document.getElementById('escolha')
-const mensagem = document.getElementById('msg')
-const paragrafo = document.getElementById('equipamentos-lista')
-
-const cadastro = document.getElementById('cadastro')
-const botao = document.getElementById('btn')
-const resposta = document.getElementById('menssagem')
-const titulos = document.getElementById('titulo')
-const selecionar = document.getElementById('escolha')
-const autenticar = document.getElementById('autenticar')
-const option = document.getElementById('opcao')
-const botaoinicio = document.getElementById('inicio')
-const texto = document.getElementById('text')
-const saudacao = document.getElementById('novaMenssagem')
-const nomeFuncionarioLogado = localStorage.getItem('nomeUsuario');
+export const cadastro = document.getElementById('cadastro')
+export const botao = document.getElementById('btn')
+export const resposta = document.getElementById('menssagem')
+export const titulos = document.getElementById('titulo')
+export const selecionar = document.getElementById('escolha')
+export const autenticar = document.getElementById('autenticar')
+export const option = document.getElementById('opcao')
+export const botaoinicio = document.getElementById('inicio')
+export const texto = document.getElementById('text')
+export const saudacao = document.getElementById('novaMenssagem')
+export const nomeFuncionarioLogado = localStorage.getItem('nomeUsuario');
 
 
-let funcionarios = {
+export let funcionarios = {
     1: {id: 1, nome: 'João', nivel: 'Gerente', senha: '123', dataAdmissao: '15/05/2023'},
     2: {id: 2, nome: 'Maria', nivel: 'Administrador', senha: '123', dataAdmissao: '15/05/2023'},
     3: {id: 3, nome: 'Marco', nivel: 'Administrador', senha: '123', dataAdmissao: '15/05/2023'},
@@ -65,7 +29,7 @@ let funcionarios = {
     8: {id: 8, nome: 'Arthur', nivel: 'Funcionario', senha: '123', dataAdmissao: '15/05/2023'}
 };
 
-let armaduraBatman = {
+export let armaduraBatman = {
     1:{armaduraNome: 'Batman Begins', situacao: 'indisponivel', anoFabricacao: '2005'}, 
     2:{armaduraNome: 'Batman Dark Knight', situacao: 'disponivel', anoFabricacao: '2008'},
     3:{armaduraNome: 'Batman Returns', situacao: 'disponivel', anoFabricacao: '2012'}, 
@@ -73,38 +37,38 @@ let armaduraBatman = {
     5:{armaduraNome: 'Batman', situacao: 'indisponivel', anoFabricacao: '2022'}
  };
 
-let equipamentos = {
+ export let equipamentos = {
     1:{arma: 'pistola 9mm',municao: '50.000 unidades'},
     2:{arma: 'pistola 44mm',municao: '150.000 unidades'},
     3:{arma: 'fuzil 762',municao: '250.000 unidades'},
     4:{arma: 'fuzil ak 47',municao: '30.000 unidades'},
 }
 
-let veiculos = {
-    1:{veiculo: 'Maserati MC20',placa: 'QMW1I50', cor:'Azul'},
-    2:{veiculo: 'Ferrari 12Cilindri',placa: 'PQR9E87', cor:'Preto'},
-    3:{veiculo: 'Lamborghini Aventador',placa: 'XMT2A00', cor: 'Amarelo'},
-    4:{veiculo: 'Porche 911',placa: 'FHU6J35', cor: 'Branco'},
+export let veiculos = {
+    1:{nome: 'Maserati MC20',placa: 'QMW1I50', cor:'Azul'},
+    2:{nome: 'Ferrari 12Cilindri',placa: 'PQR9E87', cor:'Preto'},
+    3:{nome: 'Lamborghini Aventador',placa: 'XMT2A00', cor: 'Amarelo'},
+    4:{nome: 'Porche 911',placa: 'FHU6J35', cor: 'Branco'},
 }
-let dispositivoSeguranca = {
+export let dispositivoSeguranca = {
     1:{nomeDispositivo: 'bat-cinto',situacao: 'liberado', disponibilidade:'sim'},
     2:{nomeDispositivo: 'bat-armadura',situacao: 'liberado', disponiblizacao:'sim'},
     3:{nomeDispositivo: 'bat-movel',situacao: 'liberado', disponiblizacao: 'sim'},
     4:{nomeDispositivo: 'bat-moto',situacao: 'liberado', disponiblizacao: 'sim'},
-    4:{nomeDispositivo: 'bat-movel',situacao: 'liberado', disponiblizacao: 'sim'},
-    4:{nomeDispositivo: 'bat-jato',situacao: 'liberado', disponiblizacao: 'sim'},
+    5:{nomeDispositivo: 'bat-movel',situacao: 'liberado', disponiblizacao: 'sim'},
+    6:{nomeDispositivo: 'bat-jato',situacao: 'liberado', disponiblizacao: 'sim'},
 }
 
 
 
-let tarefas = {
+export let tarefas = {
     1:{tarefa: 'estudar', prioridade: '1', funcionario: 'not', situacao: 'em execussão'},
     2:{tarefa: 'almoçar', prioridade: '1', funcionario: 'not', situacao: 'aguardando execussão'},
     3:{tarefa: 'brincar', prioridade: '1', funcionario: 'not', situacao: 'concluida'},
     4:{tarefa: 'trabalhar', prioridade: '1', funcionario: 'not', situacao: 'aguardando execussão'}
 }
 
-function iniciar() {
+export function iniciar() {
     const entrada1 = document.createElement('input');
     entrada1.setAttribute('id', 'novoIput1');
     entrada1.setAttribute('type', 'text');
@@ -121,7 +85,7 @@ function iniciar() {
     document.getElementById('cadastro').appendChild(entrada1);
     document.getElementById('cadastro').appendChild(entrada2);
     document.getElementById('cadastro').appendChild(botao3);
-
+    
     function entrar() {
         const nomeUsuario = document.getElementById('novoIput1').value;
         const senhaUsuario = document.getElementById('novoIput2').value;
@@ -175,10 +139,10 @@ function iniciar() {
     }
     botao3.addEventListener('click', entrar);
 }
+document.addEventListener("DOMContentLoaded", function() {
+    const botaoinicio = document.getElementById("inicio");
+    botaoinicio.addEventListener("click", iniciar);
+});
+// botaoinicio.addEventListener('click', iniciar);
 
-botaoinicio.addEventListener('click', iniciar);
-
-function nomeFuncionario() {
-    saudacao.innerHTML = 'ola'
-}
 

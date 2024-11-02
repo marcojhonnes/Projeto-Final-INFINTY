@@ -1,5 +1,6 @@
-function cadastrarUsuarios() {
-    
+import { funcionarios, administrador, mensagem, paragrafo} from "./script.js";
+
+export function cadastrarUsuarios() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -88,7 +89,7 @@ function cadastrarUsuarios() {
     botaoCadastrar.addEventListener('click', cadastro);
 }
 
-function mostrarNomeFuncionariosGerente() {
+export function mostrarNomeFuncionariosGerente() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -110,7 +111,7 @@ function mostrarNomeFuncionariosGerente() {
     })
 }
 
-function pesquisarFuncionarioPorNome(nome) {
+export function pesquisarFuncionarioPorNome(nome) {
     let funcionarioEncontrado = null;
 
     
@@ -126,6 +127,7 @@ function pesquisarFuncionarioPorNome(nome) {
         mensagem.innerText = dadosFuncionario;
     } else {
         mensagem.innerText = 'Funcionário não encontrado';
+        mensagem.style.color = 'red'
     }
 
     
@@ -133,7 +135,7 @@ function pesquisarFuncionarioPorNome(nome) {
 }
 
 
-function mostrarNomeFuncionariosAdministrador() {
+export function mostrarNomeFuncionariosAdministrador() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -157,7 +159,7 @@ function mostrarNomeFuncionariosAdministrador() {
     })
 
 
-function pesquisarFuncionarioPorNome(nome) {
+    function pesquisarFuncionarioPorNome(nome) {
     let funcionarioEncontrado = null;
 
     for (let key in funcionarios) {
@@ -179,7 +181,7 @@ function pesquisarFuncionarioPorNome(nome) {
 }
 }
 
-function mostrarFuncionariosId() {
+export function mostrarFuncionariosId() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -206,11 +208,10 @@ function mostrarFuncionariosId() {
         }
     }
     
-    console.log(funcionarios)
     botaoBuscar.addEventListener('click', buscar)
 }
 
-function listarFuncionariosGerente() {
+export function listarFuncionariosGerente() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerText = ''
@@ -222,7 +223,7 @@ function listarFuncionariosGerente() {
     document.getElementById('equipamentos-lista').innerHTML = todosFuncionarios
 }
 
-function listarFuncionariosIdAdministrador() {
+export function listarFuncionariosIdAdministrador() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -253,7 +254,7 @@ function listarFuncionariosIdAdministrador() {
     botaoBuscar.addEventListener('click', buscar)
 }
 
-function listarFuncionariosAdministrador() {
+export function listarFuncionariosAdministrador() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerText = ''
@@ -266,7 +267,7 @@ function listarFuncionariosAdministrador() {
     
 }
 
-function excluirFuncionarioAdministrador() {
+export function excluirFuncionarioAdministrador() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -278,13 +279,11 @@ function excluirFuncionarioAdministrador() {
     const botaoEcluir  = document.createElement('button')
     botaoEcluir.textContent = 'EXCLUIR'
 
-
-    
     document.getElementById('adm').appendChild(entrada1)
     document.getElementById('adm').appendChild(botaoEcluir)
     function excluir(){
         const id = document.getElementById('input1').value
-        mensagem.innerText = `Funcionario: ${funcionarios[id].nome}, Cargo: ${funcionarios[id].nivel} \n DATA ADMISSÃO: ${funcionario.dataAdmissao}. Funcionário excluído com sucesso!`
+        mensagem.innerText = `Funcionario: ${funcionarios[id].nome}, Cargo: ${funcionarios[id].nivel} \n DATA ADMISSÃO: ${funcionarios.dataAdmissao}. Funcionário excluído com sucesso!`
         mensagem.style.color = 'green'
         if(funcionarios[id]) {
             delete funcionarios[id]
@@ -299,7 +298,7 @@ function excluirFuncionarioAdministrador() {
     botaoEcluir.addEventListener('click', excluir)
 }
 
-function excluirGeremteFuncionario() {
+export function excluirGeremteFuncionario() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''

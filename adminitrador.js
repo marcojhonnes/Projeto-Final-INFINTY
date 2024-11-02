@@ -1,22 +1,33 @@
+import { administrador } from "./script.js";
+import {mensagem, paragrafo, escolher} from "./script.js";
 
+import {cadastrarUsuarios, mostrarFuncionariosId, listarFuncionariosIdAdministrador, listarFuncionariosAdministrador, listarFuncionariosGerente, mostrarNomeFuncionariosAdministrador, mostrarNomeFuncionariosGerente, excluirGeremteFuncionario, excluirFuncionarioAdministrador} from './funcionarios.js'
+
+import {cadastrarDispositivoSeguranca, pesquisarDispositivoSeguranca, excluirDispositivoSeguranca, retornarTodosDispositivoSeguraca} from './dispositivoSeguranca.js'
+
+import {cadastrarVeiculos, listarVeiculos, excluirVeiculo} from './veiculos.js'
+
+import {cadastrararmadura, listarArmaduras, mudarSituacaoArmaduras, excluirArmadura} from './armadurasBatman.js'
+
+import { listarTarefas, cadastrarTarefas, excluirtarefa, executarTarefa, tarefaConcluida } from './tarefas.js'
+
+import {cadastrarEquipamento, retornarTodosEquipamentos, pesquisarEquipamento, excluirEquipamento} from './equipamentos.js'
 window.onload = function() {
     const nomeFuncionario = localStorage.getItem('nomeUsuario');
     if (nomeFuncionario) {
-        // document.getElementById('novaMenssagem').innerText = `Bem-vindo, ${nomeFuncionario}, às Indústrias Wayne!`;
         document.getElementById('novaMenssagem').innerText = `Bem-vindo às Indústrias Wayne!`;
         const texto = document.getElementById('text');
         texto.innerText = nomeFuncionario;
-        // identificacao = `CARGO: ${funcionarios[i].nivel}, NOME: ${texto}`
     }
 };
 
-function limparPagina() {
+export function limparPagina() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
     }
 
-function sair() {
+export function sair() {
     window.location.href = 'index.html';
 }
 
@@ -42,15 +53,15 @@ escolher.addEventListener('change', function() {
     } else if(opcaoEscolida === '7') {
         mostrarNomeFuncionariosGerente()
     } else if(opcaoEscolida === '8') {
-        excluirFuncionario()
+        excluirFuncionarioAdministrador()
     } else if(opcaoEscolida === '9') {
         excluirGeremteFuncionario()
     } else if(opcaoEscolida === '10') {
-        cadastrarDispositivo()
+        cadastrarDispositivoSeguranca()
     } else if(opcaoEscolida === '11') {
-        pesquisarDispositivo()
+        pesquisarDispositivoSeguranca()
     } else if(opcaoEscolida === '12') {
-        retornarTodosEquipamentos()
+        retornarTodosDispositivoSeguraca()
     } else if(opcaoEscolida === '13') {
         excluirDispositivoSeguranca()
     } else if(opcaoEscolida === '14') {
@@ -78,7 +89,15 @@ escolher.addEventListener('change', function() {
     } else if(opcaoEscolida === '25') {
         excluirArmadura()
     }  else if(opcaoEscolida === '26') {
+        cadastrarEquipamento()
+    } else if(opcaoEscolida === '27') {
+        pesquisarEquipamento()
+    } else if(opcaoEscolida === '28') {
+        retornarTodosEquipamentos()
+    } else if(opcaoEscolida === '29') {
+        excluirEquipamento()
+    } else if(opcaoEscolida === '30') {
         sair()
     }
-}
+    }
     )

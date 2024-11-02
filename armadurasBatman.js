@@ -1,4 +1,5 @@
-function listarArmaduras() {
+import {armaduraBatman, administrador, mensagem, paragrafo} from "./script.js";
+export function listarArmaduras() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -10,7 +11,7 @@ function listarArmaduras() {
     document.getElementById('equipamentos-lista').innerHTML = todosArmaduras
 }  
 
-function cadastrararmadura() {
+export function cadastrararmadura() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
@@ -66,7 +67,7 @@ function cadastrararmadura() {
          botaoCadastrar.addEventListener('click', adicionarArmadura)
         }
 
-function mudarSituacaoArmaduras() {
+export function mudarSituacaoArmaduras() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = '' 
@@ -88,7 +89,7 @@ function mudarSituacaoArmaduras() {
     document.getElementById('adm').appendChild(entrada2)
     document.getElementById('adm').appendChild(botaoMudar)
 
-     function mudarArmadura() {  
+    function mudarArmadura() {  
        const id = document.getElementById('input1').value
        const situacaoArmadura = document.getElementById('input2').value
        const novaSituacao = Number(situacaoArmadura)
@@ -115,7 +116,7 @@ function mudarSituacaoArmaduras() {
     botaoMudar.addEventListener('click', mudarArmadura)
 }
 
-function excluirArmadura() {
+export function excluirArmadura() {
     administrador.innerHTML = ''
     paragrafo.innerHTML = ''
     mensagem.innerHTML = ''
