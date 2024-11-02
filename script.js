@@ -69,6 +69,7 @@ export let tarefas = {
 }
 
 export function iniciar() {
+    botaoinicio.disabled = true
     const entrada1 = document.createElement('input');
     entrada1.setAttribute('id', 'novoIput1');
     entrada1.setAttribute('type', 'text');
@@ -141,6 +142,7 @@ export function iniciar() {
 }
 document.addEventListener("DOMContentLoaded", function() {
     const botaoinicio = document.getElementById("inicio");
+    
     botaoinicio.addEventListener("click", iniciar);
 });
 // botaoinicio.addEventListener('click', iniciar);
